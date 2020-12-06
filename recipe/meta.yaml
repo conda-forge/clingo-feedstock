@@ -1,5 +1,5 @@
-{% set name = 'clingo' %}
-{% set version = "5.4.0" %}
+{% set name = "clingo" %}
+{% set version = "5.4.1" %}
 
 package:
   name: {{ name }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
-  sha256: e2de331ee0a6d254193aab5995338a621372517adcf91568092be8ac511c18f3
+  sha256: ac6606388abfe2482167ce8fd4eb0737ef6abeeb35a9d3ac3016c6f715bfee02
   patches:
     - python38.patch
 
 build:
-  number: 3
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -35,7 +35,7 @@ test:
     - gringo --version
 
 about:
-  home:  https://potassco.org/
+  home: https://potassco.org/
   license: MIT
   summary: A grounder and solver for logic programs.
   description: Clingo is an answer set programming (ASP) system that takes a logic program as input and calculates its answer sets.
