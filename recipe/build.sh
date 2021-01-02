@@ -3,7 +3,7 @@
 mkdir build
 cd build
 
-cmake .. \
+cmake ${CMAKE_ARGS} .. \
     -DPython_FIND_STRATEGY="LOCATION" \
     -DPython_ROOT_DIR=${PREFIX} \
     -DCLINGO_REQUIRE_PYTHON=ON \
