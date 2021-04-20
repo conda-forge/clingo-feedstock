@@ -25,7 +25,7 @@ requirements:
     - python
   run:
     - python
-    - cffi
+    - cffi  # [python_impl == 'cpython']
 
 test:
   commands:
