@@ -1,8 +1,8 @@
-diff --git a/cmake/FindPackageHandleStandardArgs.cmake b/cmake/FindPackageHandleStandardArgs.cmake
+diff --git cmake/FindPackageHandleStandardArgs.cmake cmake/FindPackageHandleStandardArgs.cmake
 new file mode 100644
 index 0000000..fbcf7cd
 --- /dev/null
-+++ b/cmake/FindPackageHandleStandardArgs.cmake
++++ cmake/FindPackageHandleStandardArgs.cmake
 @@ -0,0 +1,605 @@
 +# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
 +# file Copyright.txt or https://cmake.org/licensing for details.
@@ -609,11 +609,11 @@ index 0000000..fbcf7cd
 +
 +
 +cmake_policy(POP)
-diff --git a/cmake/FindPackageMessage.cmake b/cmake/FindPackageMessage.cmake
+diff --git cmake/FindPackageMessage.cmake cmake/FindPackageMessage.cmake
 new file mode 100644
 index 0000000..0628b98
 --- /dev/null
-+++ b/cmake/FindPackageMessage.cmake
++++ cmake/FindPackageMessage.cmake
 @@ -0,0 +1,48 @@
 +# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
 +# file Copyright.txt or https://cmake.org/licensing for details.
@@ -663,11 +663,11 @@ index 0000000..0628b98
 +    endif()
 +  endif()
 +endfunction()
-diff --git a/cmake/FindPython.cmake b/cmake/FindPython.cmake
+diff --git cmake/FindPython.cmake cmake/FindPython.cmake
 new file mode 100644
 index 0000000..375cb70
 --- /dev/null
-+++ b/cmake/FindPython.cmake
++++ cmake/FindPython.cmake
 @@ -0,0 +1,586 @@
 +# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
 +# file Copyright.txt or https://cmake.org/licensing for details.
@@ -1255,11 +1255,11 @@ index 0000000..375cb70
 +unset (_PYTHON_PREFIX)
 +
 +cmake_policy(POP)
-diff --git a/cmake/FindPython/Support.cmake b/cmake/FindPython/Support.cmake
+diff --git cmake/FindPython/Support.cmake cmake/FindPython/Support.cmake
 new file mode 100644
 index 0000000..4bed957
 --- /dev/null
-+++ b/cmake/FindPython/Support.cmake
++++ cmake/FindPython/Support.cmake
 @@ -0,0 +1,3390 @@
 +# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
 +# file Copyright.txt or https://cmake.org/licensing for details.
