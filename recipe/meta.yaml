@@ -1,5 +1,5 @@
 {% set name = "clingo" %}
-{% set version = "5.5.1" %}
+{% set version = "5.5.2" %}
 
 package:
   name: {{ name }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
-  sha256: b9cf2ba2001f8241b8b1d369b6f353e628582e2a00f13566e51c03c4dd61f67e
+  sha256: a2a0a590485e26dce18860ac002576232d70accc5bfcb11c0c22e66beb23baa6
   patches:
     - find-python.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
