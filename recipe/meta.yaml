@@ -1,5 +1,5 @@
 {% set name = "clingo" %}
-{% set version = "5.5.2" %}
+{% set version = "5.6.0" %}
 
 package:
   name: {{ name }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
-  sha256: a2a0a590485e26dce18860ac002576232d70accc5bfcb11c0c22e66beb23baa6
-  patches:
-    - find-python.patch
+  sha256: 2891ecfcccbe728168ac27d62c3036aae0164b15b219b4954fb18614eda79f53
 
 build:
   number: 0
@@ -20,7 +18,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - make  # [unix]
-    - cmake
+    - cmake >=3.24.0
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
