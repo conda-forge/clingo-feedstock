@@ -5,6 +5,7 @@ cd build
 
 cmake ${CMAKE_ARGS} .. \
     -DPython_FIND_STRATEGY="LOCATION" \
+    -DCLINGO_PYTHON_VERSION=${PY_VER} \
     -DPython_ROOT_DIR=${PREFIX} \
     -DCLINGO_BUILD_WITH_PYTHON=ON \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
