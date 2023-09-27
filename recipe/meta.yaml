@@ -6,10 +6,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
-  sha256: 81eb7b14977ac57c97c905bd570f30be2859eabc7fe534da3cdc65eaca44f5be
-  patches:
-    - python-3.12.patch.1
+  - url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
+    sha256: 81eb7b14977ac57c97c905bd570f30be2859eabc7fe534da3cdc65eaca44f5be
+  - path: patches
 
 build:
   number: 1
