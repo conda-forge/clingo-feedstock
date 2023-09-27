@@ -6,11 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
-  sha256: 81eb7b14977ac57c97c905bd570f30be2859eabc7fe534da3cdc65eaca44f5be
+  - url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
+    sha256: 81eb7b14977ac57c97c905bd570f30be2859eabc7fe534da3cdc65eaca44f5be
+  - path: patches
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
