@@ -8,9 +8,10 @@ package:
 source:
   - url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
     sha256: 544b76779676075bb4f557f05a015cbdbfbd0df4b2cc925ad976e86870154d81
+  - path: patches
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
