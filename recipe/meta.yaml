@@ -20,6 +20,7 @@ requirements:
     - make  # [unix]
     - cmake >=3.24.0
     - bison                                  # [not win]
+    - winflexbison                           # [win]
     - re2c
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
