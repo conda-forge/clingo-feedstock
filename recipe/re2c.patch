@@ -1,5 +1,18 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 0767dd31..1154fad7 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -237,7 +237,7 @@ if (CLINGO_BUILD_WITH_LUA)
+     endif()
+ endif()
+ find_package(BISON "2.5")
+-find_package(RE2C "0.101")
++find_package(RE2C "1.1")
+ if (Python_Development_FOUND)
+     # When using CFFI the clingo module has to be compiled with -pthread to
+     # avoid linker errors
 diff --git a/cmake/FindRE2C.cmake b/cmake/FindRE2C.cmake
-index d74ea84c..01c42c08 100644
+index d74ea84c..4e6296d2 100644
 --- a/cmake/FindRE2C.cmake
 +++ b/cmake/FindRE2C.cmake
 @@ -12,10 +12,10 @@
@@ -24,7 +37,7 @@ index d74ea84c..01c42c08 100644
  #
  #   add_executable(foo foo.c)
  #
-@@ -58,33 +58,51 @@ find_program(RE2C_EXECUTABLE NAMES re2c DOC "path to the re2c executable")
+@@ -58,33 +58,53 @@ find_program(RE2C_EXECUTABLE NAMES re2c DOC "path to the re2c executable")
  mark_as_advanced(RE2C_EXECUTABLE)
  
  if(RE2C_EXECUTABLE)
@@ -99,4 +112,7 @@ index d74ea84c..01c42c08 100644
 +    endif()
  endif()
  
- find_package_handle_standard_args(RE2C REQUIRED_VARS RE2C_EXECUTABLE VERSION_VAR RE2C_VERSION)
+-find_package_handle_standard_args(RE2C REQUIRED_VARS RE2C_EXECUTABLE VERSION_VAR RE2C_VERSION)
++if (DEFINED RE2C_VERSION)
++    find_package_handle_standard_args(RE2C REQUIRED_VARS RE2C_EXECUTABLE VERSION_VAR RE2C_VERSION)
++endif()
