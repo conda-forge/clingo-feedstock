@@ -1,5 +1,5 @@
 {% set name = "clingo" %}
-{% set version = "5.8.0" %}
+{% set version = "5.8.1" %}
 
 package:
   name: {{ name }}
@@ -7,19 +7,17 @@ package:
 
 source:
   url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
-  sha256: 4ddd5975e79d7a0f8d126039f1b923a371b1a43e0e0687e1537a37d6d6d5cc7c
-  patches:
-    - re2c.patch
+  sha256: 28fe78322cefb92e0f68f350777e19407d07bbb5179ca725fc6f77d538f0d19a
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - make  # [unix]
+    - make                                   # [unix]
     - cmake >=3.24.0
     - bison                                  # [not win]
     - winflexbison                           # [win]
