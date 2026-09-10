@@ -10,7 +10,7 @@ source:
   sha256: af961e4e8122b9e1fa325ae20c98f0a17b2087e2c777832ae6e47025ec921331
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -27,8 +27,10 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
+    - libpython
   run:
     - python
+    - libpython
     - cffi  # [python_impl == 'cpython']
 
 test:
