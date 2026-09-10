@@ -27,8 +27,10 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
+    - libpython
   run:
     - python
+    - libpython
     - cffi  # [python_impl == 'cpython']
 
 test:
