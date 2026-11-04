@@ -28,10 +28,10 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - libpython
+    - libpython  # [py>=315]
   run:
     - python
-    - libpython
+    - libpython  # [py>=315]
     - cffi  # [python_impl == 'cpython']
 
 test:
